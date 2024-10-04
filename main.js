@@ -65,4 +65,27 @@ for(const person of array){
         tr.appendChild(firstname2)
 
     }
+
+
+
+    tr.addEventListener('click', function(e)
+    {
+        let valasz = tablebody.querySelector('.selected')
+
+        if (valasz != undefined)
+        {
+            valasz.classList.remove('selected');
+        }
+        
+        console.log(e); 
+        e.currentTarget.classList.add('selected');
+
+        
+    })
+
+    
+    
+
 }
+
+
