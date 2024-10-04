@@ -88,6 +88,13 @@ for(const person of array){
     tr.appendChild(married)
     married.innerHTML = person.married
 
+    if (person.married === true) {
+        married.innerHTML = "igen"
+    }
+    else {
+        married.innerHTML = "nem"
+    }
+
     const pet = document.createElement('td')
     tablebody.appendChild(tr)
     tr.appendChild(pet)
@@ -119,5 +126,24 @@ for(const person of array){
     
 
 }
+const form = document.getElementById("form")
+form.addEventListener('submit', 
+    function(e) 
+    {
+        e.preventDefault()
+        let lastn = document.getElementById('lastname')
+        let firstn1 = document.getElementById('firstname1')
+        let firstn2 = document.getElementById('firstname2')
+        let marry = document.getElementById('married')
+        let pett = document.getElementById('pet')
+
+        const lastnValue = lastmane.value
+        const firstn1Value = firstname1.value
+        const firstn2Value = firstname2.value
+        const marryValue = married.check
+        const pettValue = pet.value
+
+        
+    })
 
 
