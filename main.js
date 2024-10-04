@@ -1,22 +1,30 @@
-const array = [
+let array = [
     {
         firstname1: 'Géza',
         firstname2: 'Ferenc',
-        lastname: 'Kocsis'
+        lastname: 'Kocsis',
+        married: true,
+        pet: 'kutya'
     },
     {
         firstname1: 'Mária',
         firstname2: 'Júlia',
-        lastname: 'Horváth'
+        lastname: 'Horváth',
+        married: false,
+        pet: 'macska'
     },
     {
         firstname1: 'Ferenc',
-        lastname: 'Balogh'
+        lastname: 'Balogh',
+        married: false,
+        pet: 'teknős'
     },
     {
         firstname1: 'Gábor',
         firstname2: 'Attila',
-        lastname: 'Horváth'
+        lastname: 'Horváth',
+        married: true,
+        pet: 'macska'
     },
 ]
 
@@ -35,9 +43,21 @@ tableheadrow.appendChild(th)
 const th2 = document.createElement('th')
 tableheadrow.appendChild(th2)
 
+const thazas = document.createElement('th')
+tableheadrow.appendChild(thazas)
+
+const thallat = document.createElement('th')
+tableheadrow.appendChild(thallat)
+
 th.innerHTML="Vezetéknév"
 th2.innerHTML="Keresztnév"
+
+thazas.innerHTML="Házas-e"
+thallat.innerHTML="Házi állat"
+
 th2.colSpan = 2
+
+
 
 const tablebody = document.createElement('tbody')
 table.appendChild(tablebody)
@@ -47,14 +67,11 @@ for(const person of array){
     tablebody.appendChild(tr)
     tr.appendChild(lastname)
     lastname.innerHTML = person.lastname
+
     const firstname = document.createElement('td')
     tablebody.appendChild(tr)
     tr.appendChild(firstname)
     firstname.innerHTML = person.firstname1
-    
-    
-    tablebody.appendChild(tr)
-    
 
     if(person.firstname2===undefined){
         firstname.colSpan = 2
@@ -65,6 +82,21 @@ for(const person of array){
         tr.appendChild(firstname2)
 
     }
+
+    const married = document.createElement('td')
+    tablebody.appendChild(tr)
+    tr.appendChild(married)
+    married.innerHTML = person.married
+
+    const pet = document.createElement('td')
+    tablebody.appendChild(tr)
+    tr.appendChild(pet)
+    pet.innerHTML = person.pet
+    
+    
+    tablebody.appendChild(tr)
+    
+
 
 
 
