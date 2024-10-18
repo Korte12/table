@@ -119,6 +119,24 @@ function validateFields(lastname, firstname, pet) {
     }
     return result
 }
+
+
+function createTableCell(tagname, innerHTML, parentElement)
+{
+    const elso = document.createElement(tagname);
+    elso.innerHTML = innerHTML
+    parentElement.appendChild(elso)
+
+    
+
+
+
+    
+
+  
+}
+
+
 rendertable()
 function rendertable() {
     for (const person of array) {
@@ -180,6 +198,7 @@ function rendertable() {
     }
     
  
+
 
 }
 
