@@ -1,2 +1,2 @@
 # table
-NE KOCKÁztasd a SZARBA lépést
+Első kód
