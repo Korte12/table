@@ -27,8 +27,14 @@ let array = [
         pet: 'macska'
     },
 ]
-const table = document.createElement('table')
-document.body.appendChild(table)
+createHTMLElement('table', 'persontable',document.body)
+createHTMLElement('thead', 'personhead',document.table)
+
+createHTMLElement('tbody', 'personbody',document.table)
+createHTMLElement('tr', 'personthead',document.table)
+
+
+
 
 const tablehead = document.createElement('thead')
 table.appendChild(tablehead)
@@ -93,7 +99,7 @@ form.addEventListener('submit', function (e) {
     tablebody.innerHTML = ""
     rendertable()
 
-    form.reset
+    form.reset();
 })
 function validateFields(lastname, firstname, pet) {
     let result = true
@@ -120,24 +126,8 @@ function validateFields(lastname, firstname, pet) {
     return result
 }
 
-
-function createTableCell(tagname, innerHTML, parentElement)
-{
-    const elso = document.createElement(tagname);
-    elso.innerHTML = innerHTML
-    parentElement.appendChild(elso)
-
-    
-
-
-
-    
-
-  
-}
-
-
 rendertable()
+
 function rendertable() {
     for (const person of array) {
         const tr = document.createElement('tr')
