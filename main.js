@@ -93,7 +93,7 @@ form.addEventListener('submit', function (e) {
     tablebody.innerHTML = ""
     rendertable()
 
-    
+    form.reset
 })
 function validateFields(lastname, firstname, pet) {
     let result = true
